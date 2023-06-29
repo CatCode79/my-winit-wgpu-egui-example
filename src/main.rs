@@ -11,10 +11,10 @@ use std::time::Instant;
 const INITIAL_WIDTH: u32 = 1920;
 const INITIAL_HEIGHT: u32 = 1080;
 
-/// A simple egui + wgpu + winit based example.
+/// A simple winit + wgpu + egui based example.
 fn main() {
     let event_loop = winit::event_loop::EventLoopBuilder::<()>::with_user_event().build();
-    let mut window = winit::window::WindowBuilder::new().with_title("egui-wgpu-winit example");
+    let mut window = winit::window::WindowBuilder::new().with_title("winit-wgpu-egui example");
 
     window = window.with_inner_size(winit::dpi::PhysicalSize {
         width: INITIAL_WIDTH,
