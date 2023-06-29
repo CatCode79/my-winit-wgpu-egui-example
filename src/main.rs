@@ -14,8 +14,7 @@ const INITIAL_HEIGHT: u32 = 1080;
 /// A simple egui + wgpu + winit based example.
 fn main() {
     let event_loop = winit::event_loop::EventLoopBuilder::<()>::with_user_event().build();
-    let mut window = winit::window::WindowBuilder::new()
-        .with_title("egui-wgpu-winit example");
+    let mut window = winit::window::WindowBuilder::new().with_title("egui-wgpu-winit example");
 
     window = window.with_inner_size(winit::dpi::PhysicalSize {
         width: INITIAL_WIDTH,
@@ -31,7 +30,6 @@ fn main() {
     let instance = wgpu::Instance::new(instance_descriptor);
     let surface = unsafe { instance.create_surface(&window).unwrap() };
 
-    // WGPU 0.11+ support force fallback (if HW implementation not supported), set it to true or false (optional).
     let adapter = pollster::block_on(instance.request_adapter(&wgpu::RequestAdapterOptions {
         power_preference: wgpu::PowerPreference::HighPerformance,
         compatible_surface: Some(&surface),
@@ -169,13 +167,6 @@ fn main() {
                 for tid in tdelta.free {
                     egui_rpass.free_texture(&tid);
                 }
-
-                // Support reactive on windows only, but not on linux.
-                // if _output.needs_repaint {
-                //     *control_flow = ControlFlow::Poll;
-                // } else {
-                //     *control_flow = ControlFlow::Wait;
-                // }
             }
             MainEventsCleared => {
                 window.request_redraw();
