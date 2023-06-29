@@ -1,0 +1,21 @@
+[package]
+name = "my-winit-wgpu-egui-example"
+version = "0.1.0"
+authors = ["CatCode79"]
+edition = "2021"
+rust-version = "1.70"
+description = "A simple example using winit + wgpu + egui 0.22"
+license = "MIT license"
+
+[features]
+default = ["demo"]
+demo = ["dep:egui_demo_lib"]
+
+[dependencies]
+egui = "0.22"
+egui-winit = "0.22"
+egui-wgpu = "0.22"
+egui_demo_lib = { version = "0.22", optional = true }
+pollster = "0.3"
+wgpu = "0.16"
+winit = { version = "0.28", features = ["x11"] }
