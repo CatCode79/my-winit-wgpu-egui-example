@@ -1,9 +1,13 @@
-use egui_wgpu::renderer::ScreenDescriptor;
-use egui_wgpu::Renderer;
+use egui_wgpu::{
+    Renderer,
+    renderer::ScreenDescriptor,
+};
 use egui_winit::State;
 use wgpu::InstanceDescriptor;
-use winit::event::Event::*;
-use winit::event_loop::ControlFlow;
+use winit::{
+    event::Event::*,
+    event_loop::ControlFlow,
+};
 
 use std::iter;
 use std::time::Instant;
