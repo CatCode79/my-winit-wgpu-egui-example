@@ -18,4 +18,4 @@ egui-wgpu = "0.22"
 egui_demo_lib = { version = "0.22", optional = true }
 pollster = "0.3"
 wgpu = "0.16"
-winit = { version = "0.28", features = ["x11"] }
+winit = { version = "0.28", default-features = false, features = ["x11", "wayland", "wayland-dlopen"] }
