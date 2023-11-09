@@ -7,6 +7,3 @@ your own engine.
  - [egui](https://github.com/emilk/egui)
  - [egui_wgpu_backend](https://github.com/hasenbanck/egui_wgpu_backend)
  - [egui_winit_platform](https://github.com/hasenbanck/egui_winit_platform)
-
-## License
-This example is public domain.
