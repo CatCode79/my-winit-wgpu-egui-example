@@ -3,8 +3,8 @@ name = "my-winit-wgpu-egui-example"
 version = "0.1.0"
 authors = ["CatCode79"]
 edition = "2021"
-rust-version = "1.70"
-description = "A simple example using winit + wgpu + egui 0.22"
+rust-version = "1.65"
+description = "A simple example using winit 0.28 + wgpu 0.17 + egui 0.23"
 license = "MIT license"
 
 [features]
